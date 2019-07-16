@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    signed_in = False
+    signed_in = True
     return render_template('index.html', signed_in=signed_in)
 
 
@@ -13,10 +13,10 @@ def index():
 #     return '<h1>Yo</h1>'
 
 
-# @app.route('/user/<username>')
-# def show(username):
-#     return f"Hi {username}"
+@app.route('/user/<username>')
+def show(username):
+    return f"Hi {username}"
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)

@@ -9,6 +9,7 @@
 <body>
     {% if signed_in %}
     <h1>Welcome Back!</h1>
+    <img src="{{url_for('static', filename='hello.jpg')}}" alt=photo />
     <button>Sign Out</button>
     {% else %}
     <h1>Hello Stranger</h1>
